@@ -1,0 +1,19 @@
+{
+  "name": "human-delay",
+  "version": "0.1.0",
+  "description": "Execute commands with human-like delays.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "random-js": "^2.1.0",
+    "sleep-promise": "^9.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  }
+}
