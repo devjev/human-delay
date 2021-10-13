@@ -2,7 +2,7 @@ import { createEntropy, Engine, MersenneTwister19937 } from 'random-js'
 import { exponential } from '../simulations'
 import sleep from 'sleep-promise'
 
-export type AsyncAction = (() => Promise<void>) | Promise<void>
+export type AsyncAction = (() => Promise<any>) | Promise<any>
 
 export class Behavior {
   private readonly exponentialIntensity: number

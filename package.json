@@ -1,6 +1,6 @@
 {
   "name": "human-delay",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Execute commands with human-like delays.",
   "main": "dist/index.js",
   "files": ["dist"],
