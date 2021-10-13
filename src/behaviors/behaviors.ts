@@ -2,7 +2,7 @@ import { createEntropy, Engine, MersenneTwister19937 } from 'random-js'
 import { exponential } from '../simulations'
 import sleep from 'sleep-promise'
 
-export type AsyncAction = () => Promise<void>
+export type AsyncAction = (() => Promise<void>) | Promise<void>
 
 export class Behavior {
   private readonly exponentialIntensity: number
@@ -22,7 +22,11 @@ export class Behavior {
   async doSingleAction(action: AsyncAction) {
     const delay = exponential(this.exponentialIntensity, this.engine) * 1000
     await sleep(delay)
-    await action()
+    if (typeof action === 'function') {
+      await action()
+    } else {
+      await action
+    }
   }
 
   async doMultipleActions(actions: AsyncAction[]) {
