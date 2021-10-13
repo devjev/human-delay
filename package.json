@@ -2,13 +2,19 @@
   "name": "human-delay",
   "version": "0.1.0",
   "description": "Execute commands with human-like delays.",
-  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": ["/dist"],
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devjev/human-delay.git"
+  },
   "scripts": {
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jevgeni Tarasov (jevgeni@hey.com)",
+  "license": "MIT",
   "dependencies": {
     "random-js": "^2.1.0",
     "sleep-promise": "^9.1.0"
